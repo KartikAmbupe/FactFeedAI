@@ -103,15 +103,14 @@ npm run dev
 
 ## 📸 Screenshots
 
-> (Include screenshots or GIFs of the interface here, if available.)
+![image](https://github.com/user-attachments/assets/ceba5ad8-eb2e-4151-9101-9b1ff2f3c9b4)
 
----
+![image](https://github.com/user-attachments/assets/357d233e-968d-4808-8ec6-2d32cbc8913e)
 
-## 📦 Sample Datasets
+![image](https://github.com/user-attachments/assets/fbe48c0f-5146-49c9-82da-d0783dfb5207)
 
-- **LIAR Dataset** – Short political statements labeled for truthfulness
-- **Fake and Real News Dataset** – Kaggle dataset with labeled articles
-- **CNN/DailyMail Dataset** – For summarization testing
+![image](https://github.com/user-attachments/assets/0ece49be-d0ad-488f-bc4f-03a843a8c7aa)
+
 
 ---
 
