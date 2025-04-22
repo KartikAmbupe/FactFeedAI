@@ -1,87 +1,144 @@
-📰 News Summarizer, Aggregator & Fake News Detection
-A web application to:
 
-✂️ Summarize lengthy news articles using advanced NLP.
+# 📰 News Summarizer, Aggregator & Fake News Detection
 
-🌐 Aggregate news from multiple sources for comprehensive coverage.
+A full-stack web application that helps users:
 
-🧪 Detect and flag potentially fake news content using machine learning.
+- ✂️ **Summarize** lengthy news articles using NLP.
+- 🌐 **Aggregate** news from multiple sources for wide coverage.
+- 🧪 **Detect fake news** using a fine-tuned RoBERTa machine learning model.
 
-Built with a Python (Flask) backend and TypeScript (React) frontend, integrating ML models for summarization and fake news detection.
+Built with a **Python Flask** backend and **React (TypeScript)** frontend, integrating state-of-the-art NLP and ML models for a seamless user experience.
 
-🚀 Features
-Text Summarization: Condense articles into concise summaries.
+---
 
-News Aggregation: Fetch and store news from diverse APIs and RSS sources.
+## 🚀 Features
 
-Fake News Detection: Flag suspicious or misleading content using ML classifiers.
+- **Text Summarization**  
+  → Condenses long news articles into concise summaries using extractive NLP techniques.
 
-Modern UI: Responsive, mobile-friendly interface with Tailwind CSS.
+- **News Aggregation**  
+  → Fetches real-time news from various APIs and RSS feeds, storing them locally for efficient access.
 
-🛠️ Tech Stack
+- **Fake News Detection**  
+  → Utilizes a fine-tuned **RoBERTa model** to classify news articles as real or fake with high accuracy.
 
-Layer	      Technology
-Frontend	   TypeScript, React, Tailwind CSS
-Backend 	   Python (Flask, Flask-SQLAlchemy, Flask-Migrate)
-ML/NLP	     Scikit-learn, NLTK, pandas, numpy, sumy
-Database	    SQLite
-Other	        dotenv, logging, APScheduler, feedparser
+- **Modern UI**  
+  → Built with React + Tailwind CSS for a responsive, user-friendly experience.
 
+---
 
-📁 Project Structure
+## 🛠️ Tech Stack
 
-.
-├── backend/          # Flask backend code
-├── frontend/         # React + Tailwind frontend
-├── datasets/         # ML training/evaluation datasets
-├── models/           # Trained ML models
-├── logs/             # Log files
-├── migrations/       # DB migrations via Alembic
-├── instance/         # Instance configs (e.g., API keys)
-├── requirements.txt  # Python dependencies
-├── .flaskenv         # Flask environment variables
-└── README.md         # Project documentation
+| Layer     | Technology                                      |
+|-----------|-------------------------------------------------|
+| Frontend  | React, TypeScript, Tailwind CSS                 |
+| Backend   | Python, Flask, Flask-SQLAlchemy, Flask-Migrate |
+| ML/NLP    | RoBERTa (HuggingFace), NLTK, pandas, numpy      |
+| Summarizer | Sumy, Cosine Similarity                        |
+| Scheduler | APScheduler                                     |
+| Database  | SQLite                                          |
+| Others    | dotenv, logging, feedparser                     |
 
+---
 
-⚙️ Installation
-1. Clone the Repository
+---
+
+## ⚙️ Installation Guide
+
+### 🔧 1. Clone the Repository
+
+```bash
 git clone https://github.com/KartikAmbupe/Mini-Project-Sem-VI.git
 cd Mini-Project-Sem-VI
+```
 
-2. Backend Setup
+### 🔧 2. Backend Setup
+
+```bash
 pip install -r requirements.txt
 flask db upgrade
 flask run
+```
 
-3. Frontend Setup
+### 🔧 3. Frontend Setup
+
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-🧪 Usage
-Open http://localhost:5173 (frontend) or http://localhost:5000 (backend API).
+---
 
-Summarizer: Condense news articles.
+## 🌐 Open in Browser
 
-Aggregator: Browse current news from multiple sources.
+- Frontend: [http://localhost:5173](http://localhost:5173)  
+- Backend API: [http://localhost:5000](http://localhost:5000)
 
-Detector: Check if an article is potentially fake.
+---
 
-🤖 Machine Learning Approach
-Summarization: Extractive, using cosine similarity and sentence ranking (NLP).
+## 🧠 Machine Learning & NLP
 
-Fake News Detection: Classification (Naive Bayes/Logistic Regression on TF-IDF features).
+### 🔍 Summarization
 
-Aggregation: Scheduled background jobs (APScheduler) pull articles via fetcher.py (NewsAPI, RSS), stored via SQLAlchemy in SQLite.
+- **Type**: Extractive
+- **Libraries**: `sumy` (LexRank), `NLTK`, `Scikit-learn`
+- **Method**: Cosine similarity and sentence ranking
 
+### ⚠️ Fake News Detection
 
-🙏 Acknowledgements
-Datasets from open-source fake news and summarization projects.
+- **Model**: Fine-tuned **RoBERTa-base**
+- **Library**: `transformers` (HuggingFace)
+- **Approach**: Binary classification (Real vs Fake)
+- **Preprocessing**: Text cleaning, RoBERTa tokenizer
+- **Training Data**: LIAR dataset, FakeNewsNet, Kaggle open-source datasets
 
-Libraries: Flask, scikit-learn, pandas, NLTK, sumy, etc.
+### 📅 News Aggregation
 
-UI inspiration from open-source Tailwind CSS projects.
+- Uses `APScheduler` to run background jobs via `fetcher.py`
+- Sources: NewsAPI, RSS feeds
+- Storage: Local database (SQLite)
 
+---
 
+## 📸 Screenshots
 
-Happy coding! 🚀
+> (Include screenshots or GIFs of the interface here, if available.)
+
+---
+
+## 📦 Sample Datasets
+
+- **LIAR Dataset** – Short political statements labeled for truthfulness
+- **Fake and Real News Dataset** – Kaggle dataset with labeled articles
+- **CNN/DailyMail Dataset** – For summarization testing
+
+---
+
+## 🙏 Acknowledgements
+
+- [HuggingFace Transformers](https://huggingface.co/transformers/)
+- [NLTK](https://www.nltk.org/)
+- [Sumy](https://github.com/miso-belica/sumy)
+- [NewsAPI](https://newsapi.org/)
+- [Tailwind UI](https://tailwindcss.com/)
+- [Kaggle Datasets](https://www.kaggle.com/)
+
+---
+
+## 📌 Future Enhancements
+
+- Add support for **abstractive summarization** using BART or T5
+- Integrate **multilingual support**
+- Enable **user authentication** for saved articles and feedback
+- Add **interactive charts** for news trends and sources
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+> Built with ❤️ by Kartik Ambupe, Neha Gade & Jiya Trivedi
