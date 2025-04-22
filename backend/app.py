@@ -119,7 +119,7 @@ def create_app():
                 logger.error(f"Scheduler error: {str(e)}")
 
     scheduler = BackgroundScheduler()
-    scheduler.add_job(scheduled_fetch, 'cron', minute='*/15')
+    scheduler.add_job(scheduled_fetch, 'cron', minute='*/30')
     scheduler.start()
 
     @app.teardown_appcontext
