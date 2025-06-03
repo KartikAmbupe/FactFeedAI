@@ -1,5 +1,5 @@
 
-# 📰 News Summarizer, Aggregator & Fake News Detection
+# 📰 News Summarizer, Aggregator & Fake News Detector
 
 A full-stack web application that helps users:
 
